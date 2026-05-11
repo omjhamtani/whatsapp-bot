@@ -42,9 +42,9 @@ The bot:
 
 ## Project files
 
-- `/home/runner/work/whatsapp-bot/whatsapp-bot/main.py` – primary bot script
-- `/home/runner/work/whatsapp-bot/whatsapp-bot/main2.py` – alternate variant of the bot flow
-- `/home/runner/work/whatsapp-bot/whatsapp-bot/requirements.txt` – Python dependencies
+- `main.py` – primary bot script
+- `main2.py` – alternate variant of the bot flow
+- `requirements.txt` – Python dependencies
 
 ## Prerequisites
 
@@ -57,7 +57,7 @@ The bot:
 ## Installation
 
 ```bash
-cd /home/runner/work/whatsapp-bot/whatsapp-bot
+cd whatsapp-bot
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -65,7 +65,7 @@ pip install -r requirements.txt
 
 ## Environment variables
 
-Create a `.env` file in `/home/runner/work/whatsapp-bot/whatsapp-bot`:
+Create a `.env` file in the project root:
 
 ```env
 # Google service account JSON as a single-line JSON string
@@ -137,7 +137,7 @@ Ensure your approved Meta template body matches this parameter order.
 ## Run the bot
 
 ```bash
-cd /home/runner/work/whatsapp-bot/whatsapp-bot
+cd whatsapp-bot
 source .venv/bin/activate
 python main.py
 ```
@@ -147,7 +147,7 @@ python main.py
 Use cron (Linux) or Task Scheduler (Windows) to run periodically. Example cron (every 30 minutes):
 
 ```cron
-*/30 * * * * cd /home/runner/work/whatsapp-bot/whatsapp-bot && /usr/bin/python main.py
+*/30 * * * * cd /path/to/whatsapp-bot && /path/to/venv/bin/python main.py
 ```
 
 The script only sends messages during configured IST meal windows.
